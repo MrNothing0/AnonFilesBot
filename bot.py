@@ -37,40 +37,37 @@ bot = Client(
 
 
 START_TEXT = """
-__Hᴇʟʟᴏ Dᴇᴀʀ I'ᴍ__ **AɴᴏɴFɪʟᴇsBᴏᴛ** 😎 \n\n__I Cᴀɴ Uᴘʟᴏᴀᴅ Fɪʟᴇs Tᴇʟᴇɢʀᴀ Tᴏ AɴᴏɴFɪʟᴇs__\n\n__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @AvishkarPatil**
+Hi I' m Anon Files Bot \n\n I can upload Telegram files to Anon Files \n\n Made With Love By @TheRoboGuy
 """
 HELP_TEXT = """
-**AɴᴏɴFɪʟᴇsBᴏᴛ Hᴇʟᴘ**\n\n__Sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ ғɪʟᴇ, I'ʟʟ ᴜᴘʟᴏᴀᴅ ɪᴛ ᴛᴏ ᴀɴᴏɴғɪʟᴇs.ᴄᴏᴍ ᴀɴᴅ ɢɪᴠᴇ ʏᴏᴜ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ__\n\n__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @AvishkarPatil**
+**Anon Files Bot Help**\n\n Send me any direct file , I'll upload file to ᴀɴᴏɴғɪʟᴇs.ᴄᴏᴍ and give you direct download link \n\n Maintained By @TheRoboGuy
 """
 ABOUT_TEXT = """
-- **Bot :** `AnonFilesBot`
-- **Creator :** [AvishkarPatil](https://telegram.me/AvishkarPatil)
-- **Source :** [Click here](https://github.com/avipatilpro/AnonFilesBot)
+- **Bot :** `Anon Files Bot`
+- **Developer :** [The Robo Guy](https://telegram.me/TheRoboGuy)
 - **Language :** [Python3](https://python.org)
 - **Server :** [Heroku](https://heroku.com)
-
-__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @AvishkarPatil
 """
 
 START_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('Help', callback_data='help'),
         InlineKeyboardButton('About', callback_data='about'),
-        InlineKeyboardButton('Close', callback_data='close')
+        InlineKeyboardButton('Channel', callback_data='channel')
         ]]
     )
 HELP_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('Home', callback_data='home'),
         InlineKeyboardButton('About', callback_data='about'),
-        InlineKeyboardButton('Close', callback_data='close')
+        InlineKeyboardButton('Channel', callback_data='channel')
         ]]
     )
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('Home', callback_data='home'),
         InlineKeyboardButton('Help', callback_data='help'),
-        InlineKeyboardButton('Close', callback_data='close')
+        InlineKeyboardButton('Channel', callback_data='channel')
         ]]
     )
 
@@ -118,7 +115,7 @@ async def upload(client, message):
             if user.status == "kicked":
                 await client.send_message(
                     chat_id=message.chat.id,
-                    text="**Sᴏʀʀʏ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴍᴇ! Cᴏɴᴛᴀᴄᴛ** [Dᴇᴠᴇʟᴏᴘᴇʀ](https://telegram.me/AvishkarPatil).",
+                    text="**Sᴏʀʀʏ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴍᴇ! Cᴏɴᴛᴀᴄᴛ** [Dᴇᴠᴇʟᴏᴘᴇʀ](https://telegram.me/TheRoboGuy).",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -130,7 +127,7 @@ async def upload(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url=f"https://t.me/{Config.UPDATES_CHANNEL}")
+                            InlineKeyboardButton("Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url=f"https://t.me/MrRobotsss/{Config.UPDATES_CHANNEL}")
                         ]
                     ]
                 ),
@@ -140,7 +137,7 @@ async def upload(client, message):
         except Exception:
             await client.send_message(
                 chat_id=message.chat.id,
-                text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ! Cᴏɴᴛᴀᴄᴛ ᴍʏ** [Dᴇᴠᴇʟᴏᴘᴇʀ](https://telegram.me/AvishkarPatil).",
+                text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ! Cᴏɴᴛᴀᴄᴛ ᴍʏ** [Dᴇᴠᴇʟᴏᴘᴇʀ](https://telegram.me/TheRoboGuy).",
                 parse_mode="markdown",
                 disable_web_page_preview=True)
             return
@@ -169,7 +166,7 @@ async def upload(client, message):
 
 **📥Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ:** `{text['data']['file']['url']['full']}`
 
-🔅__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @AvishkarPatil**"""
+🔅__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @TheRoboGuy**"""
         btn = InlineKeyboardMarkup(
                                 [[InlineKeyboardButton("Dᴏᴡɴʟᴏᴀᴅ Fɪʟᴇ", url=f"{text['data']['file']['url']['full']}")]])
         await m.edit(output, reply_markup=btn)
@@ -182,7 +179,7 @@ async def upload(client, message):
 async def url(client, message):
     msg = await message.reply("__Cʜᴇᴄᴋɪɴɢ Uʀʟ...__")
     lenk = message.text
-    cap = "© @AvishkarPatil"
+    cap = "© @TheRoboGuy"
     thumb = "./thumb.jpg"
     try:
          await msg.edit("**Bɪɢ Fɪʟᴇs Wɪʟʟ Tᴀᴋᴇ Mᴏʀᴇ Tɪᴍᴇ, Dᴏɴ'ᴛ Pᴀɴɪᴄ!**")
@@ -207,5 +204,5 @@ async def download(url):
         
         
 bot.start()
-print("AnonFilesBot Is Started!,  if Have Any Problems contact @AvishkarPatil")
+print("AnonFilesBot Is Started!,  If Have Any Problems Contact @TheRoboGuy")
 idle()
